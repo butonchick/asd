@@ -45,30 +45,20 @@ const Welcome = styled.div`
       opacity: 1;
     }
   }
-
-  @keyframes backgroundGradient {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  background-image: url(/D.png);
-  background-size: 300% 300%;
-  animation: welcome-fade-in .5s ease, backgroundGradient 30s ease infinite;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
+  & > .background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    background-position: center;
+    background-image: url(/D.png);
+    background-repeat: repeat;
+    transition: transform .2s ease, opacity .3s;
+    animation: ${tileAnimation} 5s linear infinite;
+    opacity: 0;
+}
 
   & img {
     animation-duration: 5s;
