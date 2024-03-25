@@ -46,14 +46,11 @@ const Welcome = styled.div`
     }
   }
   & > .background {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     background-size: 100%;
     background-position: center;
-    background-image: url(/D.png);
+    background-image: url(/Dashboard/D.png);
     background-repeat: repeat;
     transition: transform .2s ease, opacity .3s;
     animation: ${tileAnimation} 5s linear infinite;
